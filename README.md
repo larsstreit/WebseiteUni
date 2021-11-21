@@ -26,11 +26,11 @@ ___
   - <main>
     
 - main
-  - </main>
-  - </body>
+  - (</main>)
+  - (</body>)
   
 - Footer
-  - <footer>
-  - </footer>
+  - (<footer>)
+  - (</footer>)
   
 
