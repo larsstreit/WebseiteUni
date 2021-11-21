@@ -12,18 +12,27 @@ ___
 
 ## Seiten-Struktur:
 
-* <head>
+  <head>
   <title>Kochseite</title>
-  #head
+  
+ - head
+  
   </head>
-* <body>
+  <body>
   <nav>
-  #navigation
+  
+ - navigation
+    
   </nav>
   <main>
-  #main
+    
+ - main
+    
   </main>
   </body>
+  
+ - Footer
   <footer>
   </footer>
+  
 ---
