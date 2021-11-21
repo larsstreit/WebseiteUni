@@ -12,25 +12,27 @@ ___
 
 ## Seiten-Struktur:
 
-- Site Headline
+## Site Headline
   - <head>
   - <title>Kochseite</title>
   
-- head
+## head
   - </head>
   - <body>
   - <nav>
   
-- navigation
+## navigation
   - </nav>
   - <main>
     
-- main
-  - (</main>)
-  - (</body>)
+## main
   
-- Footer
-  - (<footer>)
-  - (</footer>)
+- </main>
+- </body>
+  
+## Footer
+
+- <footer>
+- </footer>
   
 
