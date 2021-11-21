@@ -24,4 +24,6 @@ ___
   #main
   </main>
   </body>
+  <footer>
+  </footer>
 ---
