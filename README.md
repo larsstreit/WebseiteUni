@@ -1,7 +1,7 @@
-#Webtechnologien Projekt Gruppe28
+## Webtechnologien Projekt Gruppe28
 ---
 ___
-####Aufgaben:
+## Aufgaben:
 
 * [ ] ....
 * [ ] ....
@@ -10,7 +10,7 @@ ___
 
 ___
 
-####Seiten-Struktur:
+## Seiten-Struktur:
 
 * <head>
   <title>Kochseite</title>
