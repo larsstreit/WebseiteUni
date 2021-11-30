@@ -23,14 +23,30 @@
     </nav>
     <!--<img id="image" src="https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068220_960_720.jpg" alt="Kochseite">-->
     <main>
-        <h1 id="heading">Crème de la Crème</h1>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Hier können SIe uns gerne Kontaktieren bei Fragen oder Anmerkungen</p>
+            <form>
+
+                <label for="fname">Vorname</label>
+                <input type="text" id="fname" name="firstname" placeholder="Ihr Vorname">
+
+                <label for="lname">Nachname</label>
+                <input type="text" id="lname" name="lastname" placeholder="Ihr Nachname">
+
+                <label for="subject">Betreff</label>
+                <textarea id="subject" name="subject" placeholder="Ihr Betreff" style="height:200px"></textarea>
+
+                <input type="submit" value="Senden">
+
+            </form>
+        </section>
     </main>
     <footer>
         <ul>
             <li>Copyright 2021 | Crème de la Crème</li>
             <li><a href="#" onclick="alertnp()">Impressum</a></li>
             <li><a href="#" onclick="alertnp()">Sitemap</a></li>
-
         </ul>
     </footer>
     <script src="app.js"></script>

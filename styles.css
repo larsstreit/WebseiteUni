@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#top {
+    top: 0;
+    position: relative;
+    background-color: white !important;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba( 255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(160, 159, 159);
+    box-shadow: 0px 0px 25px;
+}
+
+#top ul li {
+    float: right;
+    display: inline;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#top ul li a {
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#top ul li:first-child {
+    float: left;
+}
+
+#top ul li a:hover {
+    color: rgb(211, 70, 94);
+}
+
+#logo {
+    float: left;
+    color: white;
+    background-color: rgb(211, 70, 94);
+    font-size: 32px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0;
+}
+
+#heading {
+    color: rgb(218, 214, 214);
+    text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 16px;
+    padding-top: 16px;
+}
+
+#image {
+    width: 100%;
+    height: 460px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    padding: 16px;
+    background: url(https://cdn.pixabay.com/photo/2017/06/01/18/46/cook-2364221_960_720.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+
+footer {
+    background-color: rgba( 255, 255, 255, 1);
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 10px 0px;
+}
+
+footer ul li {
+    float: right;
+    display: inline;
+    padding: 0 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+footer ul li a {
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+
+footer ul li:first-child {
+    float: left;
+}
+
+footer ul li span {
+    display: inline;
+}
+
+footer ul li a:hover {
+    color: rgb(211, 70, 94);
+}
+
+#contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#contact input[type=text],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: verticala
+}
+
+#contact input[type=submit] {
+    background-color: rgb(211, 70, 94);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact input[type=submit]:hover {
+    background-color: #04AA6D;
+}
+
+#neue_rezepte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgba(242, 242, 242, 0.4);
+    padding: 20px;
+    height: 300px;
+    text-align: center;
+}
+
+#neue_rezepte h2 {
+    padding-bottom: 20px;
+}
+
+#neue_rezepte p:last-child {
+    padding-top: 40px;
+    font-size: 36px;
+}
+
+#services {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgba(242, 242, 242, 0.4);
+    padding: 20px;
+    height: 300px;
+    text-align: center;
+}
+
+#services h2 {
+    padding-bottom: 20px;
+}
+
+#services p:last-child {
+    padding-top: 40px;
+    font-size: 36px;
+}
