@@ -146,7 +146,7 @@ textarea {
     /* Make sure that padding and width stays in place */
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: verticala
+    resize: vertical;
 }
 
 #contact input[type=submit] {
