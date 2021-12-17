@@ -80,7 +80,7 @@ if($_POST) {
                     <h3 id="logo">CC</h3>
                     <!-- logobild-->
                 </li>
-                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><a href="Kontakt.php">Kontakt</a></li>
                 <li><a href="Services.html">Services</a></li>
                 <li><a href="Neue_Rezepte.html">Neue Rezepte</a></li>
                 <li><a href="index.html">Start</a></li>
