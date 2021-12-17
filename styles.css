@@ -62,14 +62,7 @@ ul {
     margin: 0;
 }
 
-#heading {
-    color: rgb(218, 214, 214);
-    text-align: center;
-    font-size: 64px;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
-}
+
 
 #image {
     width: 100%;
@@ -89,41 +82,7 @@ main {
     border-bottom: 1px solid rgb(31, 30, 30);
 }
 
-footer {
-    background-color: rgba( 255, 255, 255, 1);
-    width: 100%;
-    text-align: center;
-    color: black;
-    padding: 10px 0px;
-}
 
-footer ul li {
-    float: right;
-    display: inline;
-    padding: 0 10px;
-    padding-left: 10px;
-    font-size: 16px;
-}
-
-footer ul li a {
-    color: black;
-    display: block;
-    text-align: center;
-    padding: 0px 16px;
-    text-decoration: none;
-}
-
-footer ul li:first-child {
-    float: left;
-}
-
-footer ul li span {
-    display: inline;
-}
-
-footer ul li a:hover {
-    color: rgb(211, 70, 94);
-}
 
 #contact {
     position: absolute;
@@ -135,6 +94,8 @@ footer ul li a:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+
 
 #contact input[type=text],
 textarea {
