@@ -111,7 +111,7 @@ if($_POST) {
                         <label for="lname">Nachname</label>
                         <input required type="text" id="lname" name="lastname" placeholder="Ihr Nachname">
                         
-                        <label for="email">Nachname</label>
+                        <label for="email">E-Mail</label>
                         <input required type="text" id="email" name="email" placeholder="Ihre E-Mail">
 
                         <label for="subject">Betreff</label>
