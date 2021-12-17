@@ -12,7 +12,7 @@ if($_POST) {
         }       
     }else{
         if(isset($_POST['lastname'])) {
-            $lastname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
+            $lastname = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
         }
 
     if(isset($_POST['firstname'])) {
@@ -43,15 +43,24 @@ if($_POST) {
       
 
     $email_body .= "</div>";
-    $toEmail = "ls.larsstreit@t-online.de";
-    $subjectHead = "Anfrage von CC-Webseite";
  
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $email . "\r\n";
-      
+    
+    $toEmail = "ls.larsstreit@t-online.de";
+    $reSubject = "Danke fuer Ihre Anfrage";
+    $subjectHead = "Anfrage von CC-Webseite";
+    $reMessage = "<div>
+                    <label>Danke fuer Ihre Anfrage:</label>
+                    <div>".$subject."<br><br></div>Sobald ein Mitarbeiter zur Verfügung steht, wird er sich bei ihnen Melden!
+                    </div>";
+    $reheaders  = 'MIME-Version: 1.0' . "\r\n"
+    .'Content-type: text/html; charset=utf-8' . "\r\n"
+    .'From: ' . $toEmail . "\r\n";
+
     if(mail($toEmail, $subjectHead, $email_body, $headers)) {
-        echo "<p>Vielen Dank für Ihre Anfrage, $firstname. Sobald ein Mitarbeiter zur Verfügung steht wird er Ihnen antworten.</p>";
+        mail($email,$reSubject,$reMessage, $reheaders);
         $firstname = "";
         $lastname = "";
         $email = "";
