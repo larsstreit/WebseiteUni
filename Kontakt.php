@@ -5,7 +5,13 @@ if($_POST) {
     $email = "";
     $subject = "";
     $email_body = "<div>";
-      
+    
+    if(isset($_POST['submit'])){
+        if (empty($firstname) || empty($lastname) || empty($email) || empty($subject)) {
+            echo 'Es muss alles ausgefüllt werden';
+        }       
+    }else{
+
     if(isset($_POST['firstname'])) {
         $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
         $email_body .= "<div>
@@ -29,35 +35,24 @@ if($_POST) {
                            <div>".$subject."</div>
                         </div>";
     }
-      
-    /*if($concerned_department == "billing") {
-        $recipient = "billing@domain.com";
-    }
-    else if($concerned_department == "marketing") {
-        $recipient = "marketing@domain.com";
-    }
-    else if($concerned_department == "technical support") {
-        $recipient = "tech.support@domain.com";
-    }
-    else {
-        $recipient = "contact@domain.com";
-    }*/
+    
       
 
     $email_body .= "</div>";
     $toEmail = "ls.larsstreit@t-online.de";
-
+    $subjectHead = "Anfrage von CC";
  
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $email . "\r\n";
       
-    if(mail($toEmail, $email_body, $headers)) {
+    if(mail($toEmail, $subjectHead, $email_body, $headers)) {
         echo "<p>Thank you for contacting us, $firstname. You will get a reply within 24 hours.</p>";
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
     }
       
+    }
 }
 
 
@@ -94,16 +89,16 @@ if($_POST) {
                     <form action="" method="POST">
 
                         <label for="fname">Vorname</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Ihr Vorname">
+                        <input required type="text" id="fname" name="firstname" placeholder="Ihr Vorname">
 
                         <label for="lname">Nachname</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Ihr Nachname">
+                        <input required type="text" id="lname" name="lastname" placeholder="Ihr Nachname">
                         
                         <label for="email">Nachname</label>
-                        <input type="text" id="email" name="email" placeholder="Ihre E-Mail">
+                        <input required type="text" id="email" name="email" placeholder="Ihre E-Mail">
 
                         <label for="subject">Betreff</label>
-                        <textarea id="subject" name="subject" placeholder="Ihr Betreff" style="height:200px"></textarea>
+                        <textarea required id="subject" name="subject" placeholder="Ihr Betreff" style="height:200px"></textarea>
 
                         <input type="submit" value="Senden">
                     </form>    
