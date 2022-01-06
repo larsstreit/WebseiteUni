@@ -90,12 +90,12 @@ if($_POST) {
             <ul>
                 <li>
                     <h3 id="logo">CC</h3>
-                    <!-- logobild-->
                 </li>
-                <li><a href="Kontakt.php">Kontakt</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Neue_Rezepte.html">Neue Rezepte</a></li>
-                <li><a href="index.html">Start</a></li>
+                <li><a class="hidden" href="Kontakt.php">Kontakt</a></li>
+                <li><a class="hidden" href="Services.html">Services</a></li>
+                <li><a class="hidden" href="Neue_Rezepte.html">Neue Rezepte</a></li>
+                <li><a class="hidden" href="index.html">Start</a></li>
+                <li id="menu" class="show" ><img src="bars-solid.svg"></li>
             </ul>
         </nav>
         <main id="contact_main">
@@ -121,14 +121,15 @@ if($_POST) {
                     </form>    
                 </div>        
             </section>
-            <section id="#map">
+            <section id="map">
+                <h2>Adresse</h2>
                 <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=trier&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </section>
         </main>
         <footer id="contact_footer">
             <ul>
                 <li>Copyright 2021 | Crème de la Crème</li>
-                <li><a href="#" onclick="alertnp()">Impressum</a></li>
+                <li><a href="datenschutz.html">Impressum/Datenschutz</a></li>
                 <li><a href="#" onclick="alertnp()">Sitemap</a></li>
             </ul>
         </footer>

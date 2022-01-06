@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
 }
 
 body {
@@ -51,6 +55,9 @@ ul {
 #top ul li a:hover {
     color: rgb(211, 70, 94);
 }
+#top #menu{
+    display: none;
+}
 
 #logo {
     float: left;
@@ -61,32 +68,48 @@ ul {
     padding: 8px;
     margin: 0;
 }
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)),url("./cooking-gf3df9e75d_1920.jpg");
+    color: rgb(226 138 47);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+section#index{
+}
 
-#heading {
-    color: rgb(218, 214, 214);
+section#index #heading {
+    text-shadow: 2px 3px 2px black ;
+    
     text-align: center;
     font-size: 64px;
     font-weight: bold;
     margin: 16px;
     padding-top: 16px;
 }
-
-#image {
-    width: 100%;
-    height: 460px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+section#index p{
+    text-shadow: 2px 3px 2px black ;
+    
+    text-align: center;
+    font-weight: bold;
+    margin: 16px;
+    padding-top: 16px;
+    font-size: 60px;
+    width: 60%;
+    
 }
+
 
 main {
     position: relative;
-    height: 100vh;
-    padding: 16px;
-    background: url(https://cdn.pixabay.com/photo/2017/06/01/18/46/cook-2364221_960_720.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-bottom: 1px solid rgb(31, 30, 30);
+    height: inherit;
 }
 
 footer {
@@ -125,18 +148,14 @@ footer ul li a:hover {
     color: rgb(211, 70, 94);
 }
 
-#contact {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    border-radius: 5px;
-    background-color: #f2f2f2;
+section#contact {
+    background-color: white;
     padding: 20px;
+    
+    font-size: 20px;
 }
 
-#contact input[type=text],
+section#contact input[type=text],
 textarea {
     width: 100%;
     padding: 12px;
@@ -149,7 +168,7 @@ textarea {
     resize: vertical;
 }
 
-#contact input[type=submit] {
+section#contact input[type=submit] {
     background-color: rgb(211, 70, 94);
     color: white;
     padding: 12px 20px;
@@ -158,50 +177,135 @@ textarea {
     cursor: pointer;
 }
 
-#contact input[type=submit]:hover {
+section#contact input[type=submit]:hover {
     background-color: #04AA6D;
 }
 
-#neue_rezepte {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    border-radius: 5px;
-    background-color: rgba(242, 242, 242, 0.4);
-    padding: 20px;
-    height: 300px;
+section#map{
+    
+    background: white;
+}
+section#map iframe{
+    border-radius: 2%;
+    box-shadow: 0px 0px 25px;
+    width: 60%;
+    height: 60%;
+   
+}
+
+section#neue_rezepte {
+    
+}
+
+section#neue_rezepte h2 {
+    text-shadow: 2px 3px 2px black ;
+    
     text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 16px;
+    padding-top: 16px;
+}
+section#neue_rezepte p{
+    text-shadow: 2px 3px 2px black ;
+    
+    text-align: center;
+    font-weight: bold;
+    margin: 16px;
+    padding-top: 16px;
+    font-size: 60px;
+    width: 60%;
+    
+
 }
 
-#neue_rezepte h2 {
-    padding-bottom: 20px;
-}
-
-#neue_rezepte p:last-child {
+section#neue_rezepte p:last-child {
     padding-top: 40px;
     font-size: 36px;
 }
 
-#services {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    border-radius: 5px;
-    background-color: rgba(242, 242, 242, 0.4);
-    padding: 20px;
-    height: 300px;
+section#services {
+    
+    
+}
+
+section#services h2 {
+    text-shadow: 2px 3px 2px black ;
+    
     text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 16px;
+    padding-top: 16px;
 }
-
-#services h2 {
-    padding-bottom: 20px;
+#services p{
+    text-shadow: 2px 3px 2px black ;
+    
+    text-align: center;
+    font-weight: bold;
+    margin: 16px;
+    padding-top: 16px;
+    font-size: 60px;
+    width: 60%;
+    
 }
-
 #services p:last-child {
     padding-top: 40px;
     font-size: 36px;
+}
+
+section#datenschutz{
+    background: lightgray;
+    height: 100%;
+}
+section#datenschutz p{
+    display: block;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 604px) {
+    #top ul li a.hidden {
+        display: none;
+    }
+    #top #menu.show{
+        display: inline;
+        margin: 10px;
+        position: absolute;
+        right: 0;
+        
+    }
+    #top #menu img{
+        height: 30px;
+        width: 30px
+    
+    }
+
+
+    #contact, #gmap_canvas{
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 604px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
 }
