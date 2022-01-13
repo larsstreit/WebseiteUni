@@ -1,311 +1,1012 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 body {
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body.denyscroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 604px) {
+  body div span {
+    font-size: 12px !important;
+  }
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 #top {
-    top: 0;
-    position: relative;
-    background-color: white !important;
-    width: 100%;
-    z-index: 1;
-    text-align: center;
-    background-color: rgba( 255, 255, 255, 0.2);
-    border-bottom: 1px solid rgb(160, 159, 159);
-    box-shadow: 0px 0px 25px;
+  top: 0;
+  position: relative;
+  background-color: white !important;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  border-bottom: 1px solid #a09f9f;
+  -webkit-box-shadow: 0px 0px 25px black;
+          box-shadow: 0px 0px 25px black;
 }
 
 #top ul li {
-    float: right;
-    display: inline;
-    padding: 10px;
-    font-size: 20px;
-}
-
-#top ul li a {
-    color: black;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  float: right;
+  padding: 10px;
+  font-size: 20px;
 }
 
 #top ul li:first-child {
-    float: left;
+  float: left;
+}
+
+#top ul li #logo {
+  float: left;
+  color: white;
+  background-color: #2f87e2;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 8px;
+  margin: 0;
+  border-radius: 5px;
+  text-shadow: 2px 3px 2px black;
+}
+
+#top ul li a {
+  font-size: 25px;
+  color: black;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 #top ul li a:hover {
-    color: rgb(211, 70, 94);
-}
-#top #menu{
-    display: none;
+  color: #2f87e2;
 }
 
-#logo {
-    float: left;
-    color: white;
-    background-color: rgb(211, 70, 94);
-    font-size: 32px;
-    font-weight: bold;
-    padding: 8px;
-    margin: 0;
+#top #menu {
+  display: none;
 }
-section{
+
+@media screen and (max-width: 604px) {
+  #top.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100vh;
-    padding: 16px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)),url("./cooking-gf3df9e75d_1920.jpg");
-    color: rgb(226 138 47);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-bottom: 1px solid rgb(31, 30, 30);
-}
-section#index{
-}
-
-section#index #heading {
-    text-shadow: 2px 3px 2px black ;
-    
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #top ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #top ul.hidden {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #top ul li {
     text-align: center;
-    font-size: 64px;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
-}
-section#index p{
-    text-shadow: 2px 3px 2px black ;
-    
-    text-align: center;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
-    font-size: 60px;
-    width: 60%;
-    
-}
-
-
-main {
-    position: relative;
-    height: inherit;
-}
-
-footer {
-    background-color: rgba( 255, 255, 255, 1);
-    width: 100%;
-    text-align: center;
-    color: black;
-    padding: 10px 0px;
-}
-
-footer ul li {
-    float: right;
+  }
+  #top ul li a {
+    color: #e28a2f;
+    font-size: 30px !important;
+  }
+  #top ul li a.hidden {
+    display: none;
+  }
+  #top ul li #logo.hidden {
+    display: none;
+  }
+  #top ul li#menu.show {
     display: inline;
-    padding: 0 10px;
-    padding-left: 10px;
-    font-size: 16px;
+    margin: 10px;
+    position: absolute;
+    right: 0;
+  }
+  #top ul li#menu img {
+    height: 30px;
+    width: 30px;
+  }
 }
 
-footer ul li a {
-    color: black;
-    display: block;
+@media screen and (max-width: 448px) {
+  #top ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #top ul li {
+    padding: 0px;
+  }
+  #top ul li:first-child {
+    padding: 8px;
+  }
+  #top ul li a {
+    font-size: 25px !important;
+  }
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url("./images/cooking-gf3df9e75d_1920.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("./images/cooking-gf3df9e75d_1920.jpg");
+  color: #e28a2f;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section h2 {
+  text-shadow: 2px 3px 2px black;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 16px;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 604px) {
+  section h2 {
+    font-size: 40px !important;
+    padding-top: 0px;
+  }
+}
+
+section p {
+  text-shadow: 2px 3px 2px black;
+  text-align: center;
+  font-weight: bold;
+  margin: 16px;
+  padding-top: 16px;
+  font-size: 60px;
+  width: 60%;
+}
+
+@media screen and (max-width: 604px) {
+  section p {
+    font-size: 35px !important;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  section p {
+    font-size: 35px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  section p {
+    font-size: 28px !important;
+  }
+}
+
+section#index {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section#index #smallimg img {
+  display: none;
+}
+
+@media screen and (min-width: 604px) {
+  section#index #smallimg a {
     text-align: center;
-    padding: 0px 16px;
+    background-color: #e28a2f;
     text-decoration: none;
-}
-
-footer ul li:first-child {
-    float: left;
-}
-
-footer ul li span {
-    display: inline;
-}
-
-footer ul li a:hover {
-    color: rgb(211, 70, 94);
-}
-
-section#contact {
-    background-color: white;
     padding: 20px;
-    
-    font-size: 20px;
+    color: black;
+    border-radius: 30px;
+    -webkit-box-shadow: 10px 10px 25px black;
+            box-shadow: 10px 10px 25px black;
+    font-size: 25px !important;
+  }
+  section#index #smallimg a:hover {
+    color: #2f87e2;
+  }
 }
 
-section#contact input[type=text],
-textarea {
+@media screen and (max-width: 604px) {
+  section#index #smallimg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    /* Make sure that padding and width stays in place */
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+    position: relative;
+  }
+  section#index #smallimg img {
+    display: block;
+    width: 95%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 25px black;
+            box-shadow: 0px 8px 25px black;
+  }
+  section#index #smallimg a {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
+    background-color: #e28a2f;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    border-radius: 30px;
+    -webkit-box-shadow: 10px 10px 25px black;
+            box-shadow: 10px 10px 25px black;
+    font-size: 30px !important;
+  }
 }
 
-section#contact input[type=submit] {
-    background-color: rgb(211, 70, 94);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-section#contact input[type=submit]:hover {
-    background-color: #04AA6D;
-}
-
-section#map{
-    
-    background: white;
-}
-section#map iframe{
-    border-radius: 2%;
-    box-shadow: 0px 0px 25px;
-    width: 60%;
-    height: 60%;
-   
-}
-
-section#neue_rezepte {
-    
+@media screen and (max-width: 550px) {
+  section#index #smallimg a {
+    font-size: 20px !important;
+  }
 }
 
 section#neue_rezepte h2 {
-    text-shadow: 2px 3px 2px black ;
-    
-    text-align: center;
-    font-size: 64px;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
+  text-shadow: 2px 3px 2px black;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 16px;
+  padding: 40px 0;
 }
-section#neue_rezepte p{
-    text-shadow: 2px 3px 2px black ;
-    
+
+@media screen and (max-width: 448px) {
+  section#neue_rezepte h2 {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  section#neue_rezepte a {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#neue_rezepte a {
+    display: block;
     text-align: center;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
-    font-size: 60px;
+    background-color: #e28a2f;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    border-radius: 30px;
+    -webkit-box-shadow: 10px 10px 25px black;
+            box-shadow: 10px 10px 25px black;
+    font-size: 25px !important;
+  }
+  section#neue_rezepte a:hover {
+    color: #2f87e2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section#neue_rezepte {
+    height: 30vh !important;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  section#neue_rezepte {
+    height: 25vh !important;
+  }
+}
+
+section#rezeptlinks {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+section#rezeptlinks ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section#rezeptlinks ul li {
+  padding-bottom: 40px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+}
+
+section#rezeptlinks ul li:last-child {
+  border-bottom: none;
+}
+
+section#rezeptlinks ul li a {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+section#rezeptlinks ul li a span {
+  overflow-wrap: break-word;
+  color: #e28a2f;
+  text-shadow: 1px 1px 2px black;
+}
+
+@media screen and (max-width: 448px) {
+  section#rezeptlinks ul li a span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  section#rezeptlinks ul li a span {
+    font-size: 15px;
+  }
+}
+
+section#rezeptlinks ul li a span:hover {
+  color: #2f87e2;
+}
+
+section#rezeptlinks ul li img {
+  width: 50%;
+  height: auto;
+}
+
+section#rezeptlinks ul li img#fleischgerichte {
+  content: url(https://cdn.pixabay.com/photo/2017/07/14/23/25/kebab-2505237_960_720.jpg);
+}
+
+section#rezeptlinks ul li img#veganegerichte {
+  content: url(https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_960_720.jpg);
+}
+
+section#rezeptlinks ul li img#vegetarischegerichte {
+  content: url(https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_960_720.jpg);
+}
+
+@media screen and (max-width: 448px) {
+  section#rezeptlinks ul li img {
     width: 60%;
-    
-
+  }
 }
 
-section#neue_rezepte p:last-child {
-    padding-top: 40px;
-    font-size: 36px;
-}
-
-section#services {
-    
-    
+@media screen and (max-width: 320px) {
+  section#rezeptlinks ul li img {
+    width: 50%;
+  }
 }
 
 section#services h2 {
-    text-shadow: 2px 3px 2px black ;
-    
-    text-align: center;
-    font-size: 64px;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
-}
-#services p{
-    text-shadow: 2px 3px 2px black ;
-    
-    text-align: center;
-    font-weight: bold;
-    margin: 16px;
-    padding-top: 16px;
-    font-size: 60px;
-    width: 60%;
-    
-}
-#services p:last-child {
-    padding-top: 40px;
-    font-size: 36px;
+  text-shadow: 2px 3px 2px black;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 16px;
+  padding: 40px 0;
 }
 
-section#datenschutz{
-    background: lightgray;
-    height: 100%;
-}
-section#datenschutz p{
-    display: block;
-    overflow-wrap: break-word;
-    overflow: hidden;
-    margin-bottom: 10px;
+@media screen and (max-width: 448px) {
+  section#services h2 {
+    font-size: 40px !important;
+  }
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-@media screen and (max-width: 604px) {
-    #top ul li a.hidden {
-        display: none;
-    }
-    #top #menu.show{
-        display: inline;
-        margin: 10px;
-        position: absolute;
-        right: 0;
-        
-    }
-    #top #menu img{
-        height: 30px;
-        width: 30px
-    
-    }
-
-
-    #contact, #gmap_canvas{
-        display: none;
-    }
+@media screen and (min-width: 0px) {
+  section#services a {
+    display: none;
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (min-width: 604px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
-
+  section#services a {
+    display: block;
+    text-align: center;
+    background-color: #e28a2f;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    border-radius: 30px;
+    -webkit-box-shadow: 10px 10px 25px black;
+            box-shadow: 10px 10px 25px black;
+    font-size: 25px !important;
+  }
+  section#services a:hover {
+    color: #2f87e2;
+  }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-
+@media screen and (max-width: 768px) {
+  section#services {
+    height: 30vh !important;
+  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-
+@media screen and (max-width: 448px) {
+  section#services {
+    height: 25vh !important;
+  }
 }
+
+section#servicearea {
+  overflow: hidden;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+section#servicearea h2 {
+  text-align: center;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 2px solid black;
+}
+
+@media screen and (min-width: 769px) {
+  section#servicearea h2 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section#servicearea h2 {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  section#servicearea h2 {
+    font-size: 30px !important;
+  }
+}
+
+section#servicearea ul {
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section#servicearea ul li {
+  padding: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#servicearea ul li a {
+  color: black;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+}
+
+section#servicearea ul li a:hover {
+  color: #2f87e2;
+}
+
+@media screen and (min-width: 769px) {
+  section#servicearea ul li a {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section#servicearea ul li a {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  section#servicearea ul li a {
+    font-size: 30px !important;
+  }
+}
+
+section#contact {
+  padding: 20px;
+  font-size: 40px !important;
+}
+
+section#contact p {
+  font-size: 32px;
+  width: 100%;
+}
+
+@media screen and (max-width: 604px) {
+  section#contact p {
+    padding: 20px 0 !important;
+  }
+}
+
+section#contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+@media screen and (max-width: 604px) {
+  section#contact textarea {
+    font-size: 30px !important;
+  }
+}
+
+section#contact input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+section#contact input[type=submit] {
+  background-color: #2f87e2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+section#contact input[type=submit]:hover {
+  background-color: #04AA6D;
+}
+
+section#contact input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+section#contact input:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+section#contact input::-ms-input-placeholder {
+  font-size: 16px;
+}
+
+section#contact input::placeholder {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 604px) {
+  section#contact input {
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width: 604px) {
+  section#contact {
+    height: 100%;
+  }
+}
+
+section#map {
+  background: lightgray;
+}
+
+section#map iframe {
+  border-radius: 2%;
+  -webkit-box-shadow: 0 0 25px black;
+          box-shadow: 0 0 25px black;
+  width: 60%;
+  height: 60%;
+}
+
+@media screen and (max-width: 604px) {
+  section#map {
+    display: none;
+  }
+}
+
+section#datenschutz {
+  font-size: 20px;
+  color: black;
+  background: lightgray;
+  height: 100%;
+  padding: 32px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section#datenschutz h2 {
+  text-shadow: none;
+}
+
+section#datenschutz p {
+  padding-top: 20px;
+  width: 100%;
+  text-align: start;
+  display: block;
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
+  text-shadow: none;
+}
+
+@media screen and (max-width: 604px) {
+  section#datenschutz {
+    padding: 16px;
+  }
+  section#datenschutz * {
+    font-size: 16px !important;
+  }
+  section#datenschutz p {
+    width: 100%;
+  }
+}
+
+section#sitemap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100% !important;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: white !important;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section#sitemap * {
+  color: black !important;
+  padding: 10px;
+}
+
+section#sitemap h1 {
+  font-size: 30px;
+}
+
+section#sitemap a {
+  font-size: 20px;
+  text-indent: 20px;
+}
+
+section#sitemap a:hover {
+  color: #2f87e2 !important;
+}
+
+section#sitemap a span:hover {
+  color: #2f87e2 !important;
+}
+
+section#sitemap a.doubleindent {
+  text-indent: 60px;
+}
+
+section#sitemap h3 {
+  font-size: 25px;
+  text-indent: 20px;
+}
+
+@media screen and (max-width: 604px) {
+  section#fleisch {
+    height: 25vh !important;
+  }
+}
+
+@media screen and (max-width: 604px) {
+  section#vegan {
+    height: 25vh !important;
+  }
+}
+
+section#hirsch, section#kaninchen, section#gemlasagne, section#gurke {
+  height: 100%;
+}
+
+section#hirsch h2, section#kaninchen h2, section#gemlasagne h2, section#gurke h2 {
+  text-shadow: none;
+}
+
+section#hirsch p, section#kaninchen p, section#gemlasagne p, section#gurke p {
+  font-weight: 400;
+  text-shadow: none;
+}
+
+@media screen and (min-width: 1441px) {
+  section#hirsch p, section#kaninchen p, section#gemlasagne p, section#gurke p {
+    font-size: 35px !important;
+  }
+}
+
+section.rezepte {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  color: black;
+}
+
+section.rezepte div {
+  margin: auto;
+  padding-top: 20px;
+  height: 100%;
+}
+
+section.rezepte div h2 {
+  text-align: center;
+  padding: 20px 0;
+  text-shadow: none;
+}
+
+section.rezepte div p {
+  margin: auto;
+  font-size: 20px !important;
+  width: 80%;
+  padding: 40px 0;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+section.rezepte div div {
+  width: 80%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding-bottom: 20px;
+}
+
+section.rezepte div div ul {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.rezepte div div ul li {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 20px !important;
+}
+
+section.rezepte div img {
+  padding: 40px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  section.rezepte div img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 604px) {
+  section.rezepte {
+    height: 100%;
+  }
+  section.rezepte div ul li {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 604px) {
+  section {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0;
+  }
+}
+
+main {
+  position: relative;
+  height: inherit;
+}
+
+footer {
+  border-top: 1px solid black;
+  padding-top: 5px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+footer ul li {
+  display: inline;
+  font-size: 16px;
+}
+
+footer ul li:first-child {
+  float: left;
+}
+
+footer ul li a {
+  color: black;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #2f87e2;
+}
+
+footer ul li span {
+  display: inline;
+}
+
+@media screen and (max-width: 604px) {
+  footer {
+    padding-bottom: 5px;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  footer ul li a {
+    font-size: 15px !important;
+  }
+  footer ul li:first-child span {
+    display: none;
+  }
+  footer ul li:first-child::after {
+    font-size: 15px !important;
+    content: "© 2022| Crème de la Crème";
+  }
+}
+
+@media screen and (max-width: 448px) {
+  footer ul li:first-child::after {
+    font-size: 15px !important;
+    content: "©2022|CC";
+  }
+}
+
+@media screen and (min-width: 604px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

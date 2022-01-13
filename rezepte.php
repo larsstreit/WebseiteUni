@@ -3,14 +3,12 @@
 <html lang="de">
 
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8128fee8-47d4-471b-a826-33c0039b8cd0"
-        data-blockingmode="auto" type="text/javascript"></script>
     <title>Crème de la Crème | Die Rezept Seite Ihres Vertrauens</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <noscript>
-        <style>
+    <style>
             body div {
                 display: none;
             }
@@ -58,25 +56,41 @@
     </nav>
 
     <main>
-        <section id="index">
-            <h2 >Crème de la Crème</h2>
-            <p>Willkommen auf unserer Seite hier finden Sie neue Rezepte die ihr Herz verzaubern</p>
-            <div id="smallimg">
-                <img src="./images/cooking-gf3df9e75d_1920.jpg">
-                <a href="rezepte.php">Jetzt neue Gerichte entdecken</a>
-
-            </div>
+        <section id="neue_rezepte">
+            <h2>Hier finden Sie täglich die neuesten Rezepte.</h2>
+            <a href="#rezeptlinks">Hier geht es zu den Rezepten</a>
+        </section>
+        <section id="rezeptlinks">
+            <ul>
+            <?php
+            $dir = new DirectoryIterator(dirname("rezepte/."));
+            foreach ($dir as $fileinfo) {
+                if (!$fileinfo->isDot()) {
+                    $t[] = $fileinfo->getFilename();
+                }
+            }
+            for ($i = 0; $i < count($t); $i++) {
+                $d = $t[$i];
+                $s = str_replace(
+                    ".html",
+                    "",
+                    $d,
+                );
+                echo "<li><a href=./rezepte/$d><span style=text-transform:capitalize>$s</span></a><img id=$s alt=$s></li>";
+            }
+            ?>
+            </ul>
         </section>
     </main>
     <footer>
         <ul>
-            <li><span>Copyright 2022 | Crème de la Crème</span></li>
+        <li><span>Copyright 2022 | Crème de la Crème</span></li>
             <li><a href="datenschutz.html">Impressum/Datenschutz</a></li>
             <li><a href="sitemap.php">Sitemap</a></li>
-
         </ul>
     </footer>
     <script src="app.js"></script>
 </body>
+
 
 </html>
